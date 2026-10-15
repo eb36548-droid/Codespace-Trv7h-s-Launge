@@ -9,7 +9,7 @@
     content="Eziokwu Bayem's personal website — Trv7h's Launge."
   >
 
-  <title>Trv7h's Launge | Eziokwu Bayem</title>
+  <title>Trv7h's Launge /title>
 
   <style>
     :root {
@@ -438,6 +438,75 @@
       font: 11px monospace;
       letter-spacing: 1px;
     }
+.music-dock{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 100;
+  width: min(360px, calc(100vw - 36px));
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(3, 7, 14, 0.97);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.6),
+    0 0 22px rgba(56, 189, 248, 0.12);
+}
+
+.music-dock-header  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}    
+
+#music-dock-title {
+  color: var(--cyan);
+  font: 10px monospace;
+  letter-spacing: 1.5px;
+}
+
+#music-toggle {
+  padding: 6px 9px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background:transparent;
+  color: var(--text);
+  font: 11px monospace;
+  cursor: pointer;
+}
+
+#music-toggle:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.music.dock.is-minimized #music-player-content {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.music-dock.is-minimized .music-dock-header{
+  margin-bottom: 0;
+}
+
+body {
+  padding-bottom: 230px;
+}
+
+body.musicis-minimized {
+  padding-bottom: 85px;
+}
+
+@media (max-width: 700px) {
+  .music-dock {
+    right: 12px;
+    bottom: 12px;
+    width: min(360px, calc(100vw - 24px));
+  }
+}
 
     @keyframes rotate {
       to {
@@ -515,11 +584,11 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div>
-          <div class="eyebrow">Personal interface // EB-01</div>
+          <div class="eyebrow">Personal interface // T-07</div>
 
           <h1 id="hero-title">
-            Eziokwu<br>
-            <span>Bayem.</span>
+            Truth<br>
+            <span>Speakz.</span>
           </h1>
 
           <p class="intro">
@@ -584,15 +653,6 @@
   </div>
 </aside>
 
-
-<p>
-    <a
-      href="https://open.spotify.com/track/4iZxeyibg6wEFCOoAQ6Eh?utm_source=generator&theme=0"
-      target="_blank"
-      
-      
-</p>
-</section>
       <nav aria-label="Explore my profile">
         <button
           class="nav-button"
