@@ -1240,7 +1240,31 @@ body.musicis-minimized {
           "3D preview unavailable. Check your internet connection " +
           "and that your browser supports WebGL.";
       }
-    })();
+const dock = document.querySelector(".music-dock");
+const toggle = document. getElementById("music-toggle");
+const content = document.getElementById("music-player-content");
+
+if (!dock || !toggle || !content) return;
+
+
+toggle.addEventListener("click", () => {
+  const minimized = dock.classList.toggle("is-minimized");
+
+  document.body.classList.toggle(
+    "music-minimized",
+    minimized
+  );
+
+  toggle.textContent = minimized ? "Expand" : "Minimize";
+
+  toggle.setAttribute(
+    "aria-expanded",
+    String(!minimized)
+  );
+
+  content.inert = minimized;
+});
+  })();
   </script>
 </body>
 </html>
