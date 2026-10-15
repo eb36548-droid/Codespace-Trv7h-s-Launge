@@ -615,7 +615,7 @@
       <div class="brand">
         <img 
         class="site-logo"
-        src=".logo.png"
+        src="./logo.png"
         alt=""
         width="44"
         height="44">
@@ -627,6 +627,12 @@
         <span>SYSTEM ONLINE</span>
         <span aria-hidden="true">/</span>
         <time id="clock" aria-label="Local time"></time>
+        <button
+        class="action"
+        id="theme-toggle"
+        type="button">
+        Switch to Day
+      </button>
       </div>
     </header>
 
