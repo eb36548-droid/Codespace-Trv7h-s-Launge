@@ -602,6 +602,39 @@
       object-fit: contain;
       flex-shrink: 0;
     }
+
+    html[data-theme=day] {
+      --bg: #edf3fa;
+      --cyan: #075985;
+      --blue: #0369a1;
+      --text: #102033;
+      --muted: #40546b;
+      --border: rgba(7, 89, 133, 0.3);
+    }
+     html[data-theme="day"] .card {
+      background: rgba(255, 255, 255, 0.96);
+     }
+
+    html[data-theme="day"] .card {
+      background: #f5f8fc;
+    }
+
+    html[data-theme="day"] .action,
+    html[data-theme="day"] .nav-button {
+      background: #ffffff;
+    }
+    html[data-theme="day"] .action:hover
+    html[data-theme="day"] .nav-button:hover {
+      background: #dceefa;
+    }
+
+    html[data-theme="day"] .nav-button[aria-current="true"] {
+  background: #dceefa;
+    }
+
+  /* maybe will add this feature to the dock*/
+
+
   </style>
 </head>
 
