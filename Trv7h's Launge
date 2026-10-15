@@ -611,7 +611,7 @@
       --muted: #40546b;
       --border: rgba(7, 89, 133, 0.3);
     }
-     html[data-theme="day"] .card {
+     html[data-theme="day"] .panel {
       background: rgba(255, 255, 255, 0.96);
      }
 
@@ -623,7 +623,7 @@
     html[data-theme="day"] .nav-button {
       background: #ffffff;
     }
-    html[data-theme="day"] .action:hover
+    html[data-theme="day"] .action:hover,
     html[data-theme="day"] .nav-button:hover {
       background: #dceefa;
     }
