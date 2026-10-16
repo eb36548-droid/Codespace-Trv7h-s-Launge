@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="day"></html>
 <head>
   <!-- Use UTF-8 so special characters display correctly. -->
   <meta charset="UTF-8">
@@ -633,7 +633,45 @@
     }
 
   /* maybe will add this feature to the dock*/
+    html[data-theme="day"]  .music-dock {
+      background: rgba(255, 255, 255, 0.98);
 
+      box-shadow:
+      0 12px 40px rgba(16, 32, 51, 0.15),
+      0 0 22px rgba(3, 105, 161, 0.08);
+    }
+    html[data-theme="day"] .core {
+  background: radial-gradient(
+    circle,
+    #d5efff,
+    #f7fbff 75%
+  );
+}
+    html[data-theme="day"] .skin-preview {
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(3, 105, 161, 0.12),
+      transparent 70%
+    ),
+    #edf3fa;
+    }
+
+    html[data-theme="day"] body::before {
+  background:
+    linear-gradient(
+      rgba(7, 89, 133, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(7, 89, 133, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+}
+    
 
   </style>
 </head>
