@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="day">
 <head>
-  <!-- Use UTF-8 so special characters display correctly. -->
-  <meta charset="UTF-8">
-
   
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="theme-color" content="#020409">
   <meta
     name="description"
     content="Eziokwu Bayem's personal website — Trv7h's Launge."
   >
+
   <title>Trv7h's Launge</title>
   <link rel="icon" type="image/png" href="./logo.png">
+
   <style>
-    
+
     :root {
       --bg: #020409;
       --cyan: #67e8f9;
@@ -24,8 +23,6 @@
       --muted: #a0b6ca;
       --border: rgba(103, 232, 249, 0.25);
     }
-
-    
     * {
       box-sizing: border-box;
     }
@@ -38,7 +35,6 @@
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
       isolation: isolate;
-
       padding-bottom: 230px;
     }
 
@@ -124,6 +120,16 @@
       font-weight: bold;
       letter-spacing: 3px;
       color: var(--cyan);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .site-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex-shrink: 0;
     }
 
     .system {
@@ -207,7 +213,6 @@
       color: var(--cyan);
       border-color: var(--cyan);
     }
-
     .hologram {
       position: relative;
       width: min(340px, 100%);
@@ -282,8 +287,6 @@
       letter-spacing: 2px;
       color: var(--cyan);
     }
-
-  
     nav {
       display: flex;
       gap: 10px;
@@ -313,7 +316,6 @@
       animation: reveal 0.35s ease-out;
     }
 
-    
     .panel::before,
     .panel::after {
       content: "";
@@ -453,33 +455,23 @@
       letter-spacing: 1px;
     }
 
-    
-
     .music-dock {
-      
       position: fixed;
       right: 18px;
       bottom: 18px;
 
-      /* Places the player above the page's other layers. */
       z-index: 100;
-
-    
       width: min(360px, calc(100vw - 36px));
-
       padding: 12px;
       border: 1px solid var(--border);
       border-radius: 16px;
       background: rgba(3, 7, 14, 0.97);
-
-      /* Multiple shadows are separated with a comma. */
       box-shadow:
         0 12px 40px rgba(0, 0, 0, 0.6),
         0 0 22px rgba(56, 189, 248, 0.12);
     }
 
     .music-dock-header {
-      
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -515,8 +507,6 @@
       border: 0;
       border-radius: 12px;
     }
-
-    
     .music-dock.is-minimized #music-player-content {
       height: 0;
       overflow: hidden;
@@ -526,8 +516,6 @@
     .music-dock.is-minimized .music-dock-header {
       margin-bottom: 0;
     }
-
-
 
     @keyframes rotate {
       to {
@@ -547,6 +535,7 @@
       }
     }
 
+    
     @media (max-width: 700px) {
       .hero {
         grid-template-columns: 1fr;
@@ -591,19 +580,8 @@
         display: none;
       }
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px
-    }
-    .site-logo {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
 
-    html[data-theme=day] {
+    html[data-theme="day"] {
       --bg: #edf3fa;
       --cyan: #075985;
       --blue: #0369a1;
@@ -611,9 +589,10 @@
       --muted: #40546b;
       --border: rgba(7, 89, 133, 0.3);
     }
-     html[data-theme="day"] .panel {
+
+    html[data-theme="day"] .panel {
       background: rgba(255, 255, 255, 0.96);
-     }
+    }
 
     html[data-theme="day"] .card {
       background: #f5f8fc;
@@ -623,74 +602,70 @@
     html[data-theme="day"] .nav-button {
       background: #ffffff;
     }
+
     html[data-theme="day"] .action:hover,
     html[data-theme="day"] .nav-button:hover {
       background: #dceefa;
     }
 
     html[data-theme="day"] .nav-button[aria-current="true"] {
-  background: #dceefa;
+      background: #dceefa;
     }
 
-  /* maybe will add this feature to the dock*/
-    html[data-theme="day"]  .music-dock {
+    html[data-theme="day"] .music-dock {
       background: rgba(255, 255, 255, 0.98);
-
       box-shadow:
-      0 12px 40px rgba(16, 32, 51, 0.15),
-      0 0 22px rgba(3, 105, 161, 0.08);
+        0 12px 40px rgba(16, 32, 51, 0.15),
+        0 0 22px rgba(3, 105, 161, 0.08);
     }
+
     html[data-theme="day"] .core {
-  background: radial-gradient(
-    circle,
-    #d5efff,
-    #f7fbff 75%
-  );
-}
+      background: radial-gradient(
+        circle,
+        #d5efff,
+        #f7fbff 75%
+      );
+    }
+
     html[data-theme="day"] .skin-preview {
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(3, 105, 161, 0.12),
-      transparent 70%
-    ),
-    #edf3fa;
+      background:
+        radial-gradient(
+          ellipse at center,
+          rgba(3, 105, 161, 0.12),
+          transparent 70%
+        ),
+        #edf3fa;
     }
 
     html[data-theme="day"] body::before {
-  background:
-    linear-gradient(
-      rgba(7, 89, 133, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(7, 89, 133, 0.08) 1px,
-      transparent 1px
-    );
-
-  background-size: 48px 48px;
-}
-    
-
+      background:
+        linear-gradient(
+          rgba(7, 89, 133, 0.08) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(7, 89, 133, 0.08) 1px,
+          transparent 1px
+        );
+      background-size: 48px 48px;
+    }
   </style>
 </head>
 
 <body>
-  
   <canvas id="fluid-background" aria-hidden="true"></canvas>
 
   <div class="shell">
     <header>
-
       <div class="brand">
-        <img 
-        class="site-logo"
-        src="./logo.png"
-        alt=""
-        width="44"
-        height="44">
-        <span> TRV7H's LAUNGE</span>
+        <img
+          class="site-logo"
+          src="./logo.png"
+          alt=""
+          width="44"
+          height="44">
+        <span>TRV7H's LAUNGE</span>
       </div>
 
       <div class="system">
@@ -698,12 +673,14 @@
         <span>SYSTEM ONLINE</span>
         <span aria-hidden="true">/</span>
         <time id="clock" aria-label="Local time"></time>
+
+
         <button
-        class="action"
-        id="theme-toggle"
-        type="button">
-        Switch to Day
-      </button>
+          class="action"
+          id="theme-toggle"
+          type="button">
+          Switch to Night
+        </button>
       </div>
     </header>
 
@@ -723,7 +700,7 @@
           </p>
 
           <div class="actions">
-            <!-- data-open tells JavaScript which section to display. -->
+            
             <button
               class="action primary"
               type="button"
@@ -815,7 +792,6 @@
         <span class="tag">STATUS: STILL EVOLVING</span>
       </section>
 
-      
       <section
         class="panel"
         id="projects"
@@ -941,7 +917,6 @@
     </footer>
   </div>
 
-
   <aside class="music-dock" aria-labelledby="music-dock-title">
     <div class="music-dock-header">
       <span id="music-dock-title">TRV7H'S SOUNDTRACK</span>
@@ -956,8 +931,6 @@
     </div>
 
     <div id="music-player-content">
-      
-
       <iframe
         class="music-player-frame"
         title="Spotify player: What You Know by Two Door Cinema Club"
@@ -972,7 +945,6 @@
   
   <script>
     (() => {
-      // Select only the four sections controlled by navigation.
       const panels = document.querySelectorAll(
         "#about, #projects, #interests, #contact"
       );
@@ -983,12 +955,12 @@
         const target = document.getElementById(id);
         if (!target) return;
 
-        // Show the chosen panel and hide the others.
+        
         panels.forEach(panel => {
           panel.hidden = panel.id !== id;
         });
 
-        // Highlight the matching navigation button.
+        
         navButtons.forEach(button => {
           button.setAttribute(
             "aria-current",
@@ -1008,7 +980,6 @@
         }
       }
 
-    
       document.querySelectorAll("[data-open]").forEach(button => {
         button.addEventListener("click", () => {
           openPanel(
@@ -1037,7 +1008,7 @@
 
       updateClock();
 
-      // 1000 milliseconds equals one second.
+      
       setInterval(updateClock, 1000);
     })();
   </script>
@@ -1052,11 +1023,8 @@
       if (!dock || !toggle || !content) return;
 
       toggle.addEventListener("click", () => {
-  
-
         const minimized = dock.classList.toggle("is-minimized");
 
-        
         document.body.classList.toggle(
           "music-minimized",
           minimized
@@ -1064,7 +1032,6 @@
 
         toggle.textContent = minimized ? "Expand" : "Minimize";
 
-        
         toggle.setAttribute(
           "aria-expanded",
           String(!minimized)
@@ -1072,13 +1039,11 @@
 
         
         content.inert = minimized;
-
-      
       });
     })();
   </script>
 
-  <!--Scroll reactive fluid background -->
+  
   <script>
     (() => {
       const canvas = document.getElementById("fluid-background");
@@ -1091,7 +1056,6 @@
         "(prefers-reduced-motion: reduce)"
       );
 
-    
       const colors = [
         [56, 189, 248],
         [103, 232, 249],
@@ -1111,7 +1075,6 @@
         width = window.innerWidth;
         height = window.innerHeight;
 
-        
         const scale = Math.min(
           window.devicePixelRatio || 1,
           1.5
@@ -1128,10 +1091,9 @@
         ctx.clearRect(0, 0, width, height);
         if (motionPreference.matches) return;
 
-        
         ctx.globalCompositeOperation = "lighter";
 
-        
+        // Draw soft pools of light.
         for (let i = 0; i < 4; i++) {
           const color = colors[i % colors.length];
 
@@ -1170,7 +1132,7 @@
           ctx.fillRect(0, 0, width, height);
         }
 
-        
+        // Draw the flowing ribbons.
         for (let ribbon = 0; ribbon < 7; ribbon++) {
           const color = colors[ribbon % colors.length];
           const baseY = height * (0.15 + ribbon * 0.115);
@@ -1200,14 +1162,12 @@
             }
           }
 
-          
           ctx.strokeStyle =
             `rgba(${color.join(",")},${0.018 + energy * 0.04})`;
 
           ctx.lineWidth = 18 + energy * 22;
           ctx.stroke();
 
-          
           ctx.strokeStyle =
             `rgba(${color.join(",")},${0.09 + energy * 0.2})`;
 
@@ -1227,7 +1187,7 @@
         lastTime = time;
         phase += flow * seconds * 1.8;
 
-        
+        // Gradually settle after scrolling stops.
         flow *= Math.exp(-seconds * 2.2);
         energy *= Math.exp(-seconds * 1.7);
 
@@ -1239,8 +1199,6 @@
         ) {
           frame = requestAnimationFrame(animate);
         } else {
-          
-
           frame = null;
           energy = 0;
           flow = 0;
@@ -1261,7 +1219,6 @@
           energy + strength * 0.45
         );
 
-        
         flow = Math.max(
           -2,
           Math.min(
@@ -1276,7 +1233,7 @@
         }
       }
 
-      // Reaction to actual page movement.
+      // React to actual page movement.
       window.addEventListener("scroll", () => {
         const currentScroll = window.scrollY;
         const difference = currentScroll - lastScroll;
@@ -1285,7 +1242,7 @@
         reactToScroll(difference);
       }, { passive: true });
 
-      
+      // React to wheel gestures at the top or bottom too.
       window.addEventListener("wheel", event => {
         const atTop = window.scrollY <= 0;
 
@@ -1328,7 +1285,7 @@
   <!-- Load the external Minecraft viewer before using it below. -->
   <script src="https://cdn.jsdelivr.net/npm/skinview3d@3.4.2/bundles/skinview3d.bundle.js"></script>
 
-  <!-- Minecraft skin viewer -->
+  <!-- Minecraft skin viewer. -->
   <script>
     (() => {
       const canvas = document.getElementById("minecraft-skin");
@@ -1398,7 +1355,6 @@
 
         resizeObserver.observe(preview);
 
-        
         viewer.loadSkin("./finalskinFRFR.png")
           .then(() => {
             status.textContent =
@@ -1422,32 +1378,37 @@
           "3D preview unavailable. Check your internet connection " +
           "and that your browser supports WebGL.";
       }
+    })();
+  </script>
 
-  const html = document.documentElement;
-    const button = document.getElementById("theme-toggle");
+  <!-- Connect the existing day/night button to the theme CSS. -->
+  <script>
+    (() => {
+      const html = document.documentElement;
+      const button = document.getElementById("theme-toggle");
 
-    if (!button) return;
+      if (!button) return;
 
-    function updateButtonText() {
-      
-      const isDay = html.getAttribute("data-theme") === "day";
+      function updateButtonText() {
+        const isDay = html.getAttribute("data-theme") === "day";
 
-      button.textContent = isDay
-        ? "Switch to Night"
-        : "Switch to Day";
-    }
+        // Name the mode that clicking the button will switch to.
+        button.textContent = isDay
+          ? "Switch to Night"
+          : "Switch to Day";
+      }
 
-  
-    updateButtonText();
-
-    button.addEventListener("click", () => {
-      const isDay = html.getAttribute("data-theme") === "day";
-
-    
-      html.setAttribute("data-theme", isDay ? "night" : "day");
-
+      // Match the label to the theme when the page loads.
       updateButtonText();
-       });
+
+      button.addEventListener("click", () => {
+        const isDay = html.getAttribute("data-theme") === "day";
+
+        // Activate either your day CSS or default night colors.
+        html.setAttribute("data-theme", isDay ? "night" : "day");
+
+        updateButtonText();
+      });
     })();
   </script>
 </body>
