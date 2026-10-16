@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="day"></html>
+<html lang="en" data-theme="day">
 <head>
   <!-- Use UTF-8 so special characters display correctly. -->
   <meta charset="UTF-8">
@@ -1422,6 +1422,32 @@
           "3D preview unavailable. Check your internet connection " +
           "and that your browser supports WebGL.";
       }
+
+  const html = document.documentElement;
+    const button = document.getElementById("theme-toggle");
+
+    if (!button) return;
+
+    function updateButtonText() {
+      
+      const isDay = html.getAttribute("data-theme") === "day";
+
+      button.textContent = isDay
+        ? "Switch to Night"
+        : "Switch to Day";
+    }
+
+  
+    updateButtonText();
+
+    button.addEventListener("click", () => {
+      const isDay = html.getAttribute("data-theme") === "day";
+
+    
+      html.setAttribute("data-theme", isDay ? "night" : "day");
+
+      updateButtonText();
+       });
     })();
   </script>
 </body>
