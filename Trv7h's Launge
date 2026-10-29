@@ -1148,7 +1148,7 @@
 
         ctx.globalCompositeOperation = "lighter";
 
-        // Draw soft pools of light.
+        
         for (let i = 0; i < 4; i++) {
           const color = colors[i % colors.length];
 
@@ -1187,7 +1187,7 @@
           ctx.fillRect(0, 0, width, height);
         }
 
-        // Draw the flowing ribbons.
+        
         for (let ribbon = 0; ribbon < 7; ribbon++) {
           const color = colors[ribbon % colors.length];
           const baseY = height * (0.15 + ribbon * 0.115);
@@ -1242,7 +1242,7 @@
         lastTime = time;
         phase += flow * seconds * 1.8;
 
-        // Gradually settle after scrolling stops.
+        
         flow *= Math.exp(-seconds * 2.2);
         energy *= Math.exp(-seconds * 1.7);
 
@@ -1288,7 +1288,7 @@
         }
       }
 
-      // React to actual page movement.
+     
       window.addEventListener("scroll", () => {
         const currentScroll = window.scrollY;
         const difference = currentScroll - lastScroll;
@@ -1297,7 +1297,7 @@
         reactToScroll(difference);
       }, { passive: true });
 
-      // React to wheel gestures at the top or bottom too.
+      // Reacts to scrolling
       window.addEventListener("wheel", event => {
         const atTop = window.scrollY <= 0;
 
@@ -1321,7 +1321,6 @@
 
       window.addEventListener("resize", resizeCanvas);
 
-      // Stop the animation if reduced motion is enabled.
       motionPreference.addEventListener("change", () => {
         if (frame !== null) {
           cancelAnimationFrame(frame);
@@ -1340,7 +1339,7 @@
   <!-- Load the external Minecraft viewer before using it below. -->
   <script src="https://cdn.jsdelivr.net/npm/skinview3d@3.4.2/bundles/skinview3d.bundle.js"></script>
 
-  <!-- Minecraft skin viewer. -->
+   // Minecraft skin viewer
   <script>
     (() => {
       const canvas = document.getElementById("minecraft-skin");
@@ -1361,7 +1360,7 @@
           height: 360
         });
 
-        // Allow dragging, but disable zoom and panning.
+       
         viewer.controls.enableRotate = true;
         viewer.controls.enableZoom = false;
         viewer.controls.enablePan = false;
@@ -1395,11 +1394,11 @@
           }
         });
 
-        // Resize the viewer when its container changes size.
+        
         const resizeObserver = new ResizeObserver(() => {
           const width = Math.floor(preview.clientWidth);
 
-          // Pause rendering while the Projects section is hidden.
+          
           viewer.renderPaused = width === 0;
 
           if (width > 0) {
@@ -1447,19 +1446,19 @@
       function updateButtonText() {
         const isDay = html.getAttribute("data-theme") === "day";
 
-        // Name the mode that clicking the button will switch to.
+       
         button.textContent = isDay
           ? "Switch to Night"
           : "Switch to Day";
       }
 
-      // Match the label to the theme when the page loads.
+     
       updateButtonText();
 
       button.addEventListener("click", () => {
         const isDay = html.getAttribute("data-theme") === "day";
 
-        // Activate either your day CSS or default night colors.
+       
         html.setAttribute("data-theme", isDay ? "night" : "day");
 
         updateButtonText();
